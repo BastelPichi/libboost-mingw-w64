@@ -16,5 +16,5 @@ EOF
 mkdir -p $SCRIPT_DIR/libboost-mingw-w64
 cd $BOOST_ROOT
 ./bootstrap.sh
-./b2 --user-config=./user-config.jam --prefix=$SCRIPT_DIR/libboost-mingw-w64 target-os=windows address-model=64 variant=release install
+./b2 -j4 --user-config=./user-config.jam --prefix=$SCRIPT_DIR/libboost-mingw-w64 target-os=windows address-model=64 variant=release install
 
